@@ -8,6 +8,7 @@ const useTrackLocation = () => {
   const [isFindingLocation, setIsFindingLocation] = useState(false);
 
   const { dispatch } = useContext(StoreContext);
+  
 
   const success = (position) => {
     const latitude = position.coords.latitude;

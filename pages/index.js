@@ -25,10 +25,12 @@ export async function getStaticProps(context) {
     };
   }
   const coffeeStores = await fetchCoffeeStores();
+  
+
 
   return {
     props: {
-      coffeeStores,
+      coffeeStores: JSON.parse(JSON.stringify(coffeeStores))
     }, // will be passed to the page component as props
   };
 }
@@ -128,7 +130,7 @@ export default function Home(props) {
         <div className={styles.sectionWrapper}>
           {props.coffeeStores.length > 0 && (
             <>
-              <h2 className={styles.heading2}>Toronto stores</h2>
+              <h2 className={styles.heading2}>Nairobi CBD</h2>
               <div className={styles.cardLayout}>
                 {props.coffeeStores.map((coffeeStore) => {
                   return (

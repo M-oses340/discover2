@@ -24,7 +24,8 @@ export async function getStaticProps(staticProps) {
   });
   return {
     props: {
-      coffeeStore: findCoffeeStoreById ? findCoffeeStoreById: {},
+      coffeeStore: findCoffeeStoreById ? findCoffeeStoreById:{}, 
+      
     },
   };
 }

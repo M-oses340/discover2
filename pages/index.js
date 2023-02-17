@@ -25,9 +25,6 @@ export async function getStaticProps(context) {
     };
   }
   const coffeeStores = await fetchCoffeeStores();
-  
-
-
   return {
     props: {
       coffeeStores: JSON.parse(JSON.stringify(coffeeStores))
